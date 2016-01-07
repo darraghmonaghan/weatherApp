@@ -1,0 +1,48 @@
+// Place all the styles related to the weather controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#titleFont {
+	color: gray;
+}
+
+#subFont {
+	color: gray;
+	font-style: italic;
+}
+
+.title {
+	text-align: center;
+}
+
+#searchBtn {
+	font: gray;
+	text-align: center;
+}
+
+.centered {
+	text-align: center;
+}
+
+#searchBtn:hover {
+	background-color: orange;
+	color: white;
+}
+
+#searchBar {
+	padding-top: 30%;
+	text-align: center;
+}
+
+body {
+	background-image: url("/assets/nyc.jpg");
+	background-size: cover;
+}
+
+.navbar {
+	background-color: rgba(192,192,192,1.0);
+	color: rgba(0,0,0,0.6);
+	text-align: center
+}
+
