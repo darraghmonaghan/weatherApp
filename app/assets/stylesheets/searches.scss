@@ -3,18 +3,53 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#titleFont {
-	color: gray;
+/********** COLOR SCHEME **************/
+
+body {
+	background-color: rgb(255,182,124);
+	color: rgb(255,182,124);
 }
 
-#subFont {
-	color: gray;
+.color1 {
+	color: #007EA7;
+	font: #007EA7;
+}
+
+.color2 {
+	color: rgb(110,141,160);
+}
+
+.color3 {
+	color: #0F0A1E;
+	font: #0F0A1E;
+}
+
+.highlight {
+	border: 1px solid; 
+	color: rgb(244,159,82);
+}
+
+/*********  FONT STYLING  **********/
+
+.subFont {
 	font-style: italic;
 }
 
 .title {
 	text-align: center;
 }
+
+.panel-heading {
+	background-color: rgb(110,141,160);
+}
+
+div.panel.panel-default {
+	background-color: rgb(241,245,247);
+	font: white;
+}
+
+
+/************   SEARCH PAGE    **************/
 
 #searchBtn {
 	font: gray;
@@ -26,23 +61,22 @@
 }
 
 #searchBtn:hover {
-	background-color: orange;
+	background-color: rgb(244,159,82);
 	color: white;
 }
 
 #searchBar {
-	padding-top: 30%;
+	padding-top: 15%;
 	text-align: center;
-}
-
-body {
-	background-image: url("/assets/nyc.jpg");
-	background-size: cover;
 }
 
 .navbar {
 	background-color: rgba(192,192,192,1.0);
 	color: rgba(0,0,0,0.6);
-	text-align: center
+	text-align: center;
+}
+
+.navbar p {
+	padding-top: 12px;
 }
 

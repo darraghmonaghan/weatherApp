@@ -4,21 +4,23 @@
 
 	<div class='row'>
 
-		<div class='col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3'>
+		<div class='col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2'>
 
-				<%= form_for :data, url: {action: 'forecast'} do |f| %>
+			<h2 class='color1 title'>Instant Long Term Weather Forecasts</h2><hr class='highlight'>
 
-			<div id='searchBar'>
-				<%= f.text_field :city, placeholder: 'Name a City', class: 'form-control' %><br>
-			</div>
+					<%= form_for :data, url: {action: 'forecast'} do |f| %>
 
-				<div class='centered'>
-					<%= f.submit 'Check the Weather', :class => 'btn btn-default', :id => 'searchBtn'%>
+				<div id='searchBar'>
+					<%= f.text_field :city, placeholder: 'Name a City', class: 'form-control' %><br>
 				</div>
 
-			<% end %>
+					<div class='centered'>
+						<%= f.submit 'Check the Weather', :class => 'btn btn-default', :id => 'searchBtn'%>
+					</div>
 
-			
+				<% end %>
+
+		
 			<%= render "shared/footer" %>
 
 

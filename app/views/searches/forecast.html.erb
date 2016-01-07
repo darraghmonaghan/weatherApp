@@ -4,10 +4,11 @@
 
 	<div class='row'>
 
-		<div class='col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3'>
+		<div class='col-sm-12 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4'>
 
-			<h1 class='title' id='titleFont'><%= @target_city %></h1><hr>
-				<h3 class='title' id='subFont'>16 Day Weather Forecast</h3><br>
+			<br>
+			<h1 class='color1 title'><%= @target_city %></h1><hr class='highlight'>
+				<h3 class='color2 title subFont'>16 Day Weather Forecast</h3><br>
 
 				<!-- @count is ERB templated into each bootstrap div to ensure correct open / collapse functionality -->
 				<% @count = 0 %>
@@ -17,17 +18,17 @@
 						  <div class="panel panel-default">
 						    <div class="panel-heading">      
 						        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent=#<%= @count %> href=#collapse<%= @count %>>
-						          <h4 class="panel-title"> <%= Time.at(a['dt']).to_datetime %><span class='pull-right'><%= a['temp']['day'] %></span></h4>
+						          <h4 class="panel-title"> <%= Time.at(a['dt']).to_date %><span class='pull-right'><%= a['temp']['day'] %></span></h4>
 						        </a>      
 						    </div>
 						    <div id=collapse<%= @count %> class="panel-collapse collapse">
 						      <div class="panel-body">
 						      		<h4>Description: <%= a['weather'][0]['description'] %></h4>
-						      		<h6>Minimum: <%= a['temp']['min'] %></h6>
-						      		<h6>Maximum: <%= a['temp']['max'] %></h6>
-						      		<h6>Morning Temp: <%= a['temp']['morn'] %></h6>
-						      		<h6>Evening Temp: <%= a['temp']['eve'] %></h6>
-						      		<h6>Night Time Temp: <%= a['temp']['night'] %></h6>		
+						      		<h5>Minimum: <%= a['temp']['min'] %></h5>
+						      		<h5>Maximum: <%= a['temp']['max'] %></h5>
+						      		<h5>Morning Temp: <%= a['temp']['morn'] %></h5>
+						      		<h5>Evening Temp: <%= a['temp']['eve'] %></h5>
+						      		<h5>Night Time Temp: <%= a['temp']['night'] %></h5>		
 						      </div>
 						    </div>
 						  </div>
