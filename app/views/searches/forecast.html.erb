@@ -7,10 +7,21 @@
 <% @results['list'].each do |a| %>
 
 	<li>
-		<%= link_to Time.at(a['dt']).to_datetime, searches_detail_path %>
-		<%= a['temp']['day'] %>searches_detail_path %>
-			
-	</li>
+		<%= link_to Time.at(a['dt']).to_datetime, searches_detail_path, {:controller => 'searches', :action => 'detail',
+					 :min =>'a["temp"]["min"]',
+					 :max =>'a["temp"]["max"]',
+					 :night =>'a["temp"]["night"]',
+					 :pressure =>'a["humidity"]',
+					 :main =>'a["weather"]["main"]',
+					 :description =>'a["weather"]["description"]',
+					}
+			%>
+		<%= a['temp']['day'] %>
+		
 
+
+
+
+	</li>
 
 <% end %>
