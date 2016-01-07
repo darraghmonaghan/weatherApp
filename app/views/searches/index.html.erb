@@ -4,7 +4,7 @@
 
 	<%= form_for :data, url: {action: 'forecast'} do |f| %>
 
-		<%= f.text_field :city, placeholder: 'For which City would you like to see the weather forecast for?', class: 'form-control' %>
+		<%= f.text_field :city, placeholder: 'For which City would you like to see the weather forecast for?', class: 'form-control' %><br>
 
 		<%= f.submit 'Search Now', :class => 'btn btn-default'%>
 

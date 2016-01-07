@@ -2,4 +2,12 @@
 <p>Find me in app/views/weather/forecast.html.erb</p>
 
 
-<%= @data %>
+<%#= @results %>
+
+<% @results['list'].each do |a| %>
+
+	<li>
+		<%=Time.at(a['dt']).to_datetime %><%= a['temp']['day'] %>
+	</li>
+
+<% end %>
