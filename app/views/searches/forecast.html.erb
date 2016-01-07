@@ -7,7 +7,10 @@
 <% @results['list'].each do |a| %>
 
 	<li>
-		<%=Time.at(a['dt']).to_datetime %><%= a['temp']['day'] %>
+		<%= link_to Time.at(a['dt']).to_datetime, searches_detail_path %>
+		<%= a['temp']['day'] %>searches_detail_path %>
+			
 	</li>
+
 
 <% end %>
