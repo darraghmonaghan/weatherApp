@@ -1,6 +1,5 @@
 class SearchesController < ApplicationController
-  
-# require 'httparty'
+
 
   def index
   	render('index')
@@ -15,16 +14,13 @@ class SearchesController < ApplicationController
   	response.parsed_response
   	puts response.parsed_response
   	@results = response.parsed_response
-
   	render('forecast')
 
   end
 
-  def detail
-  	@detail_data = params[:min]
-  end
-
-
+  # def detail
+  # 	@detail_data = params[:min]
+  # end
 
   private
 
@@ -32,8 +28,8 @@ class SearchesController < ApplicationController
   		params.require(:city).permit(:city, :unit)
   	end
 
-  	def detail_params
-  		params.require(:data).permit(:min, :max, :night, :pressure, :main, :description)
-  	end
+  	# def detail_params
+  	# 	params.require(:data).permit(:min, :max, :night, :pressure, :main, :description)
+  	# end
 
 end

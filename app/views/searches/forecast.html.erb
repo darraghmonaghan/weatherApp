@@ -1,27 +1,46 @@
-<h1>Weather#forecast</h1>
-<p>Find me in app/views/weather/forecast.html.erb</p>
 
 
-<%#= @results %>
+<h1 class='titleFont'>16 Day Weather Forecast for <%= @target_city %></h1><br>
 
-<% @results['list'].each do |a| %>
+<div class='container'>
 
-	<li>
-		<%= link_to Time.at(a['dt']).to_datetime, searches_detail_path, {:controller => 'searches', :action => 'detail',
-					 :min =>'a["temp"]["min"]',
-					 :max =>'a["temp"]["max"]',
-					 :night =>'a["temp"]["night"]',
-					 :pressure =>'a["humidity"]',
-					 :main =>'a["weather"]["main"]',
-					 :description =>'a["weather"]["description"]',
-					}
-			%>
-		<%= a['temp']['day'] %>
-		
+	<div class='row'>
 
+		<div class='col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3'>
 
+				<!-- @count is ERB templated into each bootstrap div to ensure correct open / collapse functionality -->
+				<% @count = 0 %>
+				<% @results['list'].each do |a| %>
 
+						<div class="panel-group" id=<%= @count %>>
+						  <div class="panel panel-default">
+						    <div class="panel-heading">      
+						        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent=#<%= @count %> href=#collapse<%= @count %>>
+						          <h4 class="panel-title"> <%= Time.at(a['dt']).to_datetime %><span class='pull-right'><%= a['temp']['day'] %></span></h4>
+						        </a>      
+						    </div>
+						    <div id=collapse<%= @count %> class="panel-collapse collapse">
+						      <div class="panel-body">
+						      		<h4>Description: <%= a['weather'][0]['description'] %></h4>
+						      		<h6>Minimum: <%= a['temp']['min'] %></h6>
+						      		<h6>Maximum: <%= a['temp']['max'] %></h6>
+						      		<h6>Morning Temp: <%= a['temp']['morn'] %></h6>
+						      		<h6>Evening Temp: <%= a['temp']['eve'] %></h6>
+						      		<h6>Night Time Temp: <%= a['temp']['night'] %></h6>		
+						      </div>
+						    </div>
+						  </div>
+						</div>
 
-	</li>
+					<!-- increment counter to ensure accordion display works properly -->
+					<% @count += 1 %>		
 
-<% end %>
+				<% end %>
+		<!-- Div below for GRID SYSTEM -->
+		</div>
+
+	<!-- Div below for ROW class  -->
+	</div>	
+
+<!-- Div below for CONTAINER class -->
+</div>

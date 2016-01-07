@@ -1,13 +1,25 @@
-<h1>Weather#index</h1>
-<p>Find me in app/views/weather/index.html.erb</p>
 
 
-	<%= form_for :data, url: {action: 'forecast'} do |f| %>
+<div class='container'>
 
-		<%= f.text_field :city, placeholder: 'For which City would you like to see the weather forecast for?', class: 'form-control' %><br>
+	<div class='row'>
 
-		<%= f.submit 'Search Now', :class => 'btn btn-default'%>
+		<div class='col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3'>
 
+			<%= form_for :data, url: {action: 'forecast'} do |f| %>
 
-	<% end %>
+				<%= f.text_field :city, placeholder: 'Name a City', class: 'form-control' %><br>
+
+				<%= f.submit 'Check the Weather', :class => 'btn btn-default'%>
+
+			<% end %>
+
+		<!-- div for GRID SYSTEM -->
+		</div>
+
+	<!-- div for ROW class -->
+	</div>
+
+<!-- div for CONTAINER -->
+</div>
 
