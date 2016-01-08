@@ -10,9 +10,18 @@
 
 					<%= form_for :data, url: {action: 'forecast'} do |f| %>
 
-				<div id='searchBar'>
-					<%= f.text_field :city, placeholder: 'Name a City', class: 'form-control' %><br>
-				</div>
+					<div id='searchBar' class='centered'>
+						<%= f.text_field :city, placeholder: 'Name a City', class: 'form-control' %><br>
+					</div>
+
+					<div id='radioBtnsDiv' class='centered'>
+					
+							<%= f.radio_button :unit, 'metric', :class => 'radioBtn', :id => 'firstRadio' %> Celcius
+
+							<%= f.radio_button :unit, 'imperial', :class => 'radioBtn', :id => 'secondRadio' %>Fahrenheit
+							<br><br>
+
+					</div>
 
 					<div class='centered'>
 						<%= f.submit 'Check the Weather', :class => 'btn btn-default', :id => 'searchBtn'%>

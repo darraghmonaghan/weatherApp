@@ -51,6 +51,16 @@ div.panel.panel-default {
 
 /************   SEARCH PAGE    **************/
 
+#firstRadio {
+	margin: 0 5px 0 0;
+}
+
+#secondRadio {
+	margin: 0 5px 0 15px;
+	/* spacing around radion button, and its placeholder text */
+}
+
+
 #searchBtn {
 	font: gray;
 	text-align: center;

@@ -18,17 +18,17 @@
 						  <div class="panel panel-default">
 						    <div class="panel-heading">      
 						        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent=#<%= @count %> href=#collapse<%= @count %>>
-						          <h4 class="panel-title"> <%= Time.at(a['dt']).to_date %><span class='pull-right'><%= a['temp']['day'] %></span></h4>
+						          <h4 class="panel-title"> <%= Time.at(a['dt']).to_date %><span class='pull-right'><%= a['temp']['day'] %>°</span></h4>
 						        </a>      
 						    </div>
 						    <div id=collapse<%= @count %> class="panel-collapse collapse">
 						      <div class="panel-body">
 						      		<h4>Description: <%= a['weather'][0]['description'] %></h4>
-						      		<h5>Minimum: <%= a['temp']['min'] %></h5>
-						      		<h5>Maximum: <%= a['temp']['max'] %></h5>
-						      		<h5>Morning Temp: <%= a['temp']['morn'] %></h5>
-						      		<h5>Evening Temp: <%= a['temp']['eve'] %></h5>
-						      		<h5>Night Time Temp: <%= a['temp']['night'] %></h5>		
+						      		<h5>Minimum: <%= a['temp']['min'] %>°</h5>
+						      		<h5>Maximum: <%= a['temp']['max'] %>°</h5>
+						      		<h5>Morning Temp: <%= a['temp']['morn'] %>°</h5>
+						      		<h5>Evening Temp: <%= a['temp']['eve'] %>°</h5>
+						      		<h5>Night Time Temp: <%= a['temp']['night'] %>°</h5>		
 						      </div>
 						    </div>
 						  </div>
